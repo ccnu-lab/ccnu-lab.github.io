@@ -27,16 +27,6 @@ step2:
 
 ## 提交规范
 
-提交代码 backend
-
-```
-yarn lint
-git add .
-git commit -m "feat:[XY-21]"
-```
-
-提交代码 frontend
-
 ```
 git add .
 git commit -m "feat:[XY-21]"
