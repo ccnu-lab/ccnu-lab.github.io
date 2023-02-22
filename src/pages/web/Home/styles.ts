@@ -14,11 +14,6 @@ const ImageWrap = styled.div`
   display: flex;
   align-items: center;
   background-size: cover;
-  opacity: 1;
-  .flash {
-    transition-duration: 500ms;
-    transition-property: margin-right;
-  }
 `;
 
 const PrincipalBox = styled.div`

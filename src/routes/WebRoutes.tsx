@@ -1,12 +1,15 @@
 import {lazy} from 'react';
 import {RouteObject} from 'react-router-dom';
 
+import {KeepAlive} from '@/component/KeepAlive';
+
 const WebLayout = lazy(() => import('@/routes/WebLayout'));
 const Home = lazy(() => import('@/pages/web/Home/Home'));
-const Achievement = lazy(() => import('@/pages/web/Achievement/Achievement'));
+const Achievements = lazy(() => import('@/pages/web/Achievements/Achievements'));
 const Introduction = lazy(() => import('@/pages/web/Introduction/Introduction'));
-const Topic = lazy(() => import('@/pages/web/Topic/Topic'));
-const Trend = lazy(() => import('@/pages/web/Trend/Trend'));
+const Subjects = lazy(() => import('@/pages/web/subjects/Subjects'));
+const Dynamics = lazy(() => import('@/pages/web/Dynamics/Dynamics'));
+const CommonDetail = lazy(() => import('@/pages/web/CommonDetail/CommonDetail'));
 
 export type RoutePath = 'home' | 'introduction' | 'dynamics' | 'subjects' | 'achievements';
 
@@ -38,17 +41,32 @@ const WebRoutes: RouteObject[] = [
       {
         id: 'dynamics',
         path: '/dynamics',
-        element: <Trend />,
+        element: (
+          <KeepAlive>
+            <Dynamics />
+          </KeepAlive>
+        ),
+        children: [
+          {
+            id: 'commonDetail',
+            path: '/dynamics/:id',
+            element: <CommonDetail />,
+          },
+        ],
       },
       {
         id: 'subjects',
         path: '/subjects',
-        element: <Topic />,
+        element: <Subjects />,
       },
       {
         id: 'achievements',
         path: '/achievements',
-        element: <Achievement />,
+        element: (
+          <KeepAlive>
+            <Achievements />
+          </KeepAlive>
+        ),
       },
     ],
   },

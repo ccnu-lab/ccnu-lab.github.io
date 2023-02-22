@@ -4,56 +4,16 @@ import React from 'react';
 import {useNavigate} from 'react-router';
 
 import home_title from '@/assets/images/home_title.png';
-import principal_default from '@/assets/images/principal_default.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 const {Title} = Typography;
+import dynamics from '@/constants/dynamics';
+import principals from '@/constants/principals';
 import {ListItem, TitleWrap, FlexWrap} from '@/style/styles';
 
 import {HomeWrap, ImageWrap, PrincipalBox, ProjectWrap, ProjectContentWrap} from './styles';
 
 export default function Home() {
-  const principalData = [
-    {image: principal_default, name: '张三'},
-    {image: principal_default, name: '张三'},
-    {image: principal_default, name: '张三'},
-    {image: principal_default, name: '张三'},
-    {image: principal_default, name: '张三'},
-  ];
-  const trendData = [
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-    {
-      title: '科技创新2030—“新一代人工智能”重大项目“连续学习理论和方法”2022年度进展总结会成功召开',
-      createTime: new Date(),
-    },
-  ];
-
+  const dynamicsTop8 = dynamics.slice(0, 8);
   const navigate = useNavigate();
   return (
     <HomeWrap>
@@ -69,7 +29,7 @@ export default function Home() {
         <Title level={1}>负责人介绍</Title>
       </TitleWrap>
       <FlexWrap>
-        {principalData.map((item) => (
+        {principals.map((item) => (
           <PrincipalBox key={item.image}>
             <img src={item.image} alt="" />
             <div className="principalName">{item.name}</div>
@@ -93,8 +53,8 @@ export default function Home() {
         </Title>
       </TitleWrap>
       <div style={{marginBottom: '164px'}}>
-        {trendData.map((item) => (
-          <ListItem key={item.title} onClick={() => navigate('/trend')}>
+        {dynamicsTop8.map((item) => (
+          <ListItem key={item.id} onClick={() => navigate('/dynamics')}>
             <Space size={'middle'}>
               <TrendIcon />
               <div>{item.title}</div>
