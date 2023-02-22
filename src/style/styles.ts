@@ -1,5 +1,5 @@
+import {Card} from 'antd';
 import styled from 'styled-components';
-
 const ListItem = styled.div`
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,13 @@ const TitleWrap = styled.div`
   }
 `;
 
+const CardWrap = styled(Card)`
+  margin: -103px 0 117px;
+  height: 1382px;
+  width: 1200px;
+  background: #fbfdff;
+`;
+
 const FlexWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -42,4 +49,4 @@ const FlexWrap = styled.div`
   align-items: center;
 `;
 
-export {ListItem, TitleWrap, FlexWrap};
+export {ListItem, TitleWrap, FlexWrap, CardWrap};

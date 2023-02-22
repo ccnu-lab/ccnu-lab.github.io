@@ -1,31 +1,16 @@
 import {useSetState} from 'ahooks';
-import {Card, Space, Typography} from 'antd';
+import {Space, Typography} from 'antd';
 import dayjs from 'dayjs';
 import React from 'react';
 import {useNavigate} from 'react-router';
-import styled from 'styled-components';
 
 import tab_bg from '@/assets/images/tab_bg.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 import {CommonPagination} from '@/component/UI/CommonPagination';
 import dynamics from '@/constants/dynamics';
-import {FlexWrap, ListItem, TitleWrap} from '@/style/styles';
+import {CardWrap, FlexWrap, ListItem, TitleWrap} from '@/style/styles';
 
 const {Title} = Typography;
-
-const DynamicsWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-const CardWrap = styled(Card)`
-  margin: -103px 0 117px;
-  height: 1382px;
-  width: 1200px;
-  background: #fbfdff;
-`;
 
 export default function Dynamics() {
   const navigate = useNavigate();
@@ -36,7 +21,7 @@ export default function Dynamics() {
 
   const dynamicsData = dynamics.slice((state.page - 1) * 10, state.size * state.page);
   return (
-    <DynamicsWrap>
+    <FlexWrap>
       <img src={tab_bg} />
       <CardWrap>
         <TitleWrap style={{justifyContent: 'left'}}>
@@ -76,6 +61,6 @@ export default function Dynamics() {
           />
         </FlexWrap>
       </CardWrap>
-    </DynamicsWrap>
+    </FlexWrap>
   );
 }
