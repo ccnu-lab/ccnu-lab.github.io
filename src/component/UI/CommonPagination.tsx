@@ -11,6 +11,8 @@ type CommonPaginationProps = {
 };
 
 const PagInationWrap = styled(Pagination)`
+  position: absolute;
+  bottom: 0;
   padding-bottom: 98px;
   .ant-pagination-item {
     background: #ffffff;

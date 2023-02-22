@@ -9,7 +9,7 @@ import tab_bg from '@/assets/images/tab_bg.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 import {CommonPagination} from '@/component/UI/CommonPagination';
 import dynamics from '@/constants/dynamics';
-import {ListItem, TitleWrap} from '@/style/styles';
+import {FlexWrap, ListItem, TitleWrap} from '@/style/styles';
 
 const {Title} = Typography;
 
@@ -67,14 +67,14 @@ export default function Dynamics() {
             </ListItem>
           ))}
         </div>
-        <div style={{alignItems: 'center'}}>
+        <FlexWrap>
           <CommonPagination
             pageSize={10}
             current={state.page}
             total={dynamics.length || 0}
             onChange={(page: number, size: number) => setState({page, size})}
           />
-        </div>
+        </FlexWrap>
       </CardWrap>
     </DynamicsWrap>
   );
