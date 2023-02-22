@@ -41,4 +41,5 @@ const FlexWrap = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 export {ListItem, TitleWrap, FlexWrap};

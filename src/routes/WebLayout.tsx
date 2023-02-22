@@ -25,7 +25,8 @@ const WebHeader = styled.div`
   top: 0;
   background: #f5f5f5;
   width: 100%;
-  padding: 20px 360px 14px;
+  height: 80px;
+  padding: 14px 360px;
   z-index: 10;
 `;
 
