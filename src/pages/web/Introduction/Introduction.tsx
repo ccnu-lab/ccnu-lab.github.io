@@ -1,8 +1,8 @@
 import React from 'react';
-
 import introduction from '@/assets/images/introduction.png';
 import {CommonPage} from '@/component/UI/CommonPage';
 import {ContentWrap} from '@/style/styles';
+
 
 export default function Introduction() {
   return (
