@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, Typography} from 'antd';
 import styled from 'styled-components';
-import tab_bg from '@/assets/images/tab_bg.png';
+import tab_bg from '@/assets/images/tab_bg.jpg';
 import principal_default from '@/assets/images/principal_default.png';
 import {FlexWrap, TitleWrap, UnderLineWrap} from '@/style/styles';
 import {PrincipalBox} from '@/pages/web/Home/styles';
