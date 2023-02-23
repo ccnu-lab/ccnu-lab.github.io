@@ -1,10 +1,10 @@
 import {Typography} from 'antd';
 import React from 'react';
-
-const {Title} = Typography;
 import introduction from '@/assets/images/introduction.png';
 import tab_bg from '@/assets/images/tab_bg.png';
 import {CardWrap, ContentWrap, FlexWrap, TitleWrap, UnderLineWrap} from '@/style/styles';
+
+const {Title} = Typography;
 
 export default function Introduction() {
   return (
@@ -17,7 +17,7 @@ export default function Introduction() {
           </Title>
         </TitleWrap>
         <div style={{padding: '0 56px 0 80px'}}>
-          <UnderLineWrap />
+          <UnderLineWrap style={{width: '125px'}} />
         </div>
         <br></br>
         <ContentWrap style={{padding: '0 7% 56px'}}>
