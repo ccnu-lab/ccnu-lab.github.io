@@ -1,5 +1,6 @@
 import {Card} from 'antd';
 import styled from 'styled-components';
+
 const ListItem = styled.div`
   display: flex;
   justify-content: space-between;
@@ -49,10 +50,10 @@ const FlexWrap = styled.div`
   align-items: center;
 `;
 
-const UnderLineWrap = styled.div`
+const UnderLineWrap = styled.div<{lineColor?: string; lineWidth?: string}>`
   height: 1px;
-  background-color: #000000;
-  width: 152px;
+  background-color: ${(props) => (props.lineColor ? props.lineColor : ' #000000')};
+  width: ${(props) => (props.lineWidth ? props.lineWidth : '100%')};
 `;
 
 const ContentWrap = styled.div`
