@@ -1,4 +1,4 @@
-import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as i}from"./antd-59c365fd.js";const o=t.div`
+import{s as t}from"./styled-components.browser.esm-60567542.js";import{f as i}from"./antd-1e142849.js";const o=t.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as i}fr
   height: 82px;
   position: relative;
   &:hover {
-    background: #ecf5ff;
+    background: #ecf5ff !important;
     color: #005a9f;
     svg {
       path {
