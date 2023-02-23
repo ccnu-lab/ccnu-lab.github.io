@@ -1,1 +1,0 @@
-import{j as t}from"./main-53af32c3.js";import{C as i}from"./CommonPage-8dc3fcb7.js";import"./react-f0d12c14.js";import"./antd-1e142849.js";import"./styles-c6336298.js";import"./styled-components.browser.esm-60567542.js";function p(){return t.jsx(i,{titleName:"详情页",initTitleOn:!0,lineColor:"#D6D6D6",children:t.jsx("div",{children:"这里是详情页"})})}export{p as default};
