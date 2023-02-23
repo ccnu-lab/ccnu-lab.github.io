@@ -3,7 +3,7 @@ import React from 'react';
 
 const {Title} = Typography;
 import introduction from '@/assets/images/introduction.png';
-import tab_bg from '@/assets/images/tab_bg.png';
+import tab_bg from '@/assets/images/tab_bg.jpg';
 import {CardWrap, ContentWrap, FlexWrap, TitleWrap, UnderLineWrap} from '@/style/styles';
 
 export default function Introduction() {

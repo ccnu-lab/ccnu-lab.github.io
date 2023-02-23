@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import React from 'react';
 import {useNavigate} from 'react-router';
 
-import tab_bg from '@/assets/images/tab_bg.png';
+import tab_bg from '@/assets/images/tab_bg.jpg';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 import {CommonPagination} from '@/component/UI/CommonPagination';
 import dynamics from '@/constants/dynamics';

@@ -54,6 +54,7 @@ const UnderLineWrap = styled.div`
   background-color: #000000;
   width: 152px;
 `;
+
 const ContentWrap = styled.div`
   font-weight: 400;
   font-size: 16px;

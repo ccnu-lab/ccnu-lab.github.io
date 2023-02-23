@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import home from '@/assets/images/home.png';
+import home from '@/assets/images/home.jpg';
 import home_project_background from '@/assets/images/home_project_bg.png';
 
 const HomeWrap = styled.div`

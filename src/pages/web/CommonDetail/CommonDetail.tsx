@@ -1,7 +1,7 @@
 import {Typography} from 'antd';
 import React from 'react';
 
-import tab_bg from '@/assets/images/tab_bg.png';
+import tab_bg from '@/assets/images/tab_bg.jpg';
 import {CardWrap, FlexWrap, TitleWrap, UnderLineWrap} from '@/style/styles';
 
 const {Title} = Typography;
