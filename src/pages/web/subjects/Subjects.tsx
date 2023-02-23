@@ -2,9 +2,8 @@ import React from 'react';
 import {Card, Typography} from 'antd';
 import styled from 'styled-components';
 import tab_bg from '@/assets/images/tab_bg.jpg';
-import principal_default from '@/assets/images/principal_default.png';
-import {FlexWrap, TitleWrap, UnderLineWrap} from '@/style/styles';
-import {PrincipalBox} from '@/pages/web/Home/styles';
+import subjects from '@/constants/subjects';
+import {FlexWrap, TitleWrap, UnderLineWrap,PrincipalBox} from '@/style/styles';
 
 const {Title} = Typography;
 
@@ -18,16 +17,14 @@ const FlexLeftWrap = styled.div`
 `
 
 const PrincipalBoxWarp = styled(PrincipalBox)`
-  margin-top: 60px;
-  margin-bottom: 85px;
+  margin: 60px 29px 85px 0;
 `;
 const SubjectInfo = styled.div`
   display: flex;
   flex-direction: column;
   width: 769px;
   height: 219px;
-  margin-top: 60px;
-  margin-bottom: 119px;
+  margin: 60px 0 119px 0;
   .title {
     font-weight: 700;
     font-size: 16px;
@@ -44,57 +41,18 @@ const SubjectInfo = styled.div`
 `;
 const CardWarp = styled(Card)`
   width: 1200px;
-  margin-top: -103px;
-  margin-bottom: 143px;
-  padding-left: 60px;
-  padding-top: 57px;
-  padding-right: 12px;
+  margin: -103px 0 143px 0;
+  padding: 57px 0 0 60px;
   box-shadow: 0px 8px 12px 1px rgba(102, 120, 166, 0.03), 0px 5px 9px -3px rgba(102, 120, 166, 0.05);
 `;
 
-const subjectList = [
-  {
-    title: '课题1:连续学习的理论与模型',
-    imgsrc: principal_default,
-    leader: '张三',
-    context:
-      '从理论模型研究入手，聚焦多源异构数据的多重知识表达体系构建（研究内容1）、抗灾难性遗忘的稳健知识增扩（研究内容2）和人在回路的模型能力成长方法（研究内容3），旨在通过建立知识和数据相融合的连续学习理论模型，实现连续学习过程中的抗灾难性遗忘知识表达和稳健知识增扩，进而实现智能系统的主动模式探知和自主连续学习',
-  },
-  {
-    title: '课题1:连续学习的理论与模型',
-    imgsrc: principal_default,
-    leader: '张三',
-    context:
-      '从理论模型研究入手，聚焦多源异构数据的多重知识表达体系构建（研究内容1）、抗灾难性遗忘的稳健知识增扩（研究内容2）和人在回路的模型能力成长方法（研究内容3），旨在通过建立知识和数据相融合的连续学习理论模型，实现连续学习过程中的抗灾难性遗忘知识表达和稳健知识增扩，进而实现智能系统的主动模式探知和自主连续学习',
-  },
-  {
-    title: '课题1:连续学习的理论与模型',
-    imgsrc: principal_default,
-    leader: '张三',
-    context:
-      '从理论模型研究入手，聚焦多源异构数据的多重知识表达体系构建（研究内容1）、抗灾难性遗忘的稳健知识增扩（研究内容2）和人在回路的模型能力成长方法（研究内容3），旨在通过建立知识和数据相融合的连续学习理论模型，实现连续学习过程中的抗灾难性遗忘知识表达和稳健知识增扩，进而实现智能系统的主动模式探知和自主连续学习',
-  },
-  {
-    title: '课题1:连续学习的理论与模型',
-    imgsrc: principal_default,
-    leader: '张三',
-    context:
-      '从理论模型研究入手，聚焦多源异构数据的多重知识表达体系构建（研究内容1）、抗灾难性遗忘的稳健知识增扩（研究内容2）和人在回路的模型能力成长方法（研究内容3），旨在通过建立知识和数据相融合的连续学习理论模型，实现连续学习过程中的抗灾难性遗忘知识表达和稳健知识增扩，进而实现智能系统的主动模式探知和自主连续学习',
-  },
-  {
-    title: '课题1:连续学习的理论与模型',
-    imgsrc: principal_default,
-    leader: '张三',
-    context:
-      '从理论模型研究入手，聚焦多源异构数据的多重知识表达体系构建（研究内容1）、抗灾难性遗忘的稳健知识增扩（研究内容2）和人在回路的模型能力成长方法（研究内容3），旨在通过建立知识和数据相融合的连续学习理论模型，实现连续学习过程中的抗灾难性遗忘知识表达和稳健知识增扩，进而实现智能系统的主动模式探知和自主连续学习',
-  },
-];
+
 
 export default function Subjects() {
   return (
     <FlexColumnWrap>
       <img src={tab_bg} />
-      {subjectList.map((subject, index) => {
+      {subjects.map((subject, index) => {
         return (
           <CardWarp key={index}>
             <TitleWrap style={{justifyContent: 'left'}}>

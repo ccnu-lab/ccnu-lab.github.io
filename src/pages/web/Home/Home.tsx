@@ -10,7 +10,7 @@ import dynamics from '@/constants/dynamics';
 import principals from '@/constants/principals';
 import {ListItem, TitleWrap, FlexWrap, ContentWrap} from '@/style/styles';
 
-import {HomeWrap, ImageWrap, PrincipalBox, ProjectWrap, ProjectContentWrap} from './styles';
+import {HomeWrap, ImageWrap, HomePrincipalBox, ProjectWrap, ProjectContentWrap} from './styles';
 
 export default function Home() {
   const dynamicsTop8 = dynamics.slice(0, 8);
@@ -30,11 +30,11 @@ export default function Home() {
       </TitleWrap>
       <FlexWrap>
         {principals.map((item) => (
-          <PrincipalBox key={item.image}>
+          <HomePrincipalBox key={item.image}>
             <img src={item.image} alt="" />
             <div className="principalName">{item.name}</div>
             <div className="introduction">项目负责人</div>
-          </PrincipalBox>
+          </HomePrincipalBox>
         ))}
       </FlexWrap>
       <ProjectWrap>

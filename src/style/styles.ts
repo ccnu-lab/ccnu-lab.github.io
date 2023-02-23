@@ -63,4 +63,43 @@ const ContentWrap = styled.div`
   justify-content: center;
 `;
 
-export {ListItem, TitleWrap, FlexWrap, CardWrap, UnderLineWrap, ContentWrap};
+const PrincipalBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 293px;
+  width: 210px;
+  top: 1363 px;
+  background: #ffffff;
+  box-shadow: 0px 8px 12px 1px rgba(102, 120, 166, 0.03), 0px 5px 9px -3px rgba(102, 120, 166, 0.05);
+  border-radius: 4px;
+  margin-right: 38px;
+  margin-top: 82px;
+  margin-bottom: 155px;
+  padding: 25px 20px;
+  
+  position: relative;
+  border: 1px solid rgba(102, 120, 166, 0);
+  img {
+    width: 158px;
+    height: 180px;
+    padding-bottom: 20px;
+  }
+  .principalName {
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+  }
+  .introduction {
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+`;
+
+export {ListItem, TitleWrap, PrincipalBox, FlexWrap, CardWrap, UnderLineWrap, ContentWrap};
