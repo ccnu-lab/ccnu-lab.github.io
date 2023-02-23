@@ -52,7 +52,7 @@ const HeaderContent = styled(Header)`
 `;
 
 const ContentContent = styled(Content)`
-  padding: 30px 0;
+  padding: 80px 0;
 `;
 
 const FooterContent = styled.div`
