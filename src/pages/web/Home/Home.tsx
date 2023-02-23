@@ -8,7 +8,7 @@ import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 const {Title} = Typography;
 import dynamics from '@/constants/dynamics';
 import principals from '@/constants/principals';
-import {ListItem, TitleWrap, FlexWrap} from '@/style/styles';
+import {ListItem, TitleWrap, FlexWrap, ContentWrap} from '@/style/styles';
 
 import {HomeWrap, ImageWrap, PrincipalBox, ProjectWrap, ProjectContentWrap} from './styles';
 
@@ -57,9 +57,9 @@ export default function Home() {
           <ListItem key={item.id} onClick={() => navigate('/dynamics')}>
             <Space size={'middle'}>
               <TrendIcon />
-              <div>{item.title}</div>
+              <ContentWrap>{item.title}</ContentWrap>
             </Space>
-            <div>{dayjs(item.createTime).format('YYYY-MM-DD')}</div>
+            <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
           </ListItem>
         ))}
       </div>

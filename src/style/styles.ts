@@ -49,4 +49,16 @@ const FlexWrap = styled.div`
   align-items: center;
 `;
 
-export {ListItem, TitleWrap, FlexWrap, CardWrap};
+const UnderLineWrap = styled.div`
+  height: 1px;
+  background-color: #000000;
+  width: 152px;
+`;
+const ContentWrap = styled.div`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  justify-content: center;
+`;
+
+export {ListItem, TitleWrap, FlexWrap, CardWrap, UnderLineWrap, ContentWrap};

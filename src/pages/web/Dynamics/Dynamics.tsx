@@ -8,7 +8,7 @@ import tab_bg from '@/assets/images/tab_bg.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 import {CommonPagination} from '@/component/UI/CommonPagination';
 import dynamics from '@/constants/dynamics';
-import {CardWrap, FlexWrap, ListItem, TitleWrap} from '@/style/styles';
+import {CardWrap, ContentWrap, FlexWrap, ListItem, TitleWrap, UnderLineWrap} from '@/style/styles';
 
 const {Title} = Typography;
 
@@ -25,17 +25,12 @@ export default function Dynamics() {
       <img src={tab_bg} />
       <CardWrap>
         <TitleWrap style={{justifyContent: 'left'}}>
-          <Title level={1} style={{margin: '0', padding: '77px 0 20px 76px'}}>
+          <Title level={1} style={{margin: '0', padding: '77px 0 20px 80px'}}>
             新闻
           </Title>
         </TitleWrap>
-        <div style={{padding: '0 56px 0 76px'}}>
-          <div
-            style={{
-              width: '64px',
-              border: '1px solid #000000',
-            }}
-          />
+        <div style={{padding: '0 56px 0 80px'}}>
+          <UnderLineWrap style={{width: '64px'}} />
         </div>
         <div style={{marginTop: '56px'}}>
           {dynamicsData.map((item) => (
@@ -46,9 +41,9 @@ export default function Dynamics() {
             >
               <Space size={'middle'}>
                 <TrendIcon />
-                <div>{item.title}</div>
+                <ContentWrap>{item.title}</ContentWrap>
               </Space>
-              <div>{dayjs(item.createTime).format('YYYY-MM-DD')}</div>
+              <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
             </ListItem>
           ))}
         </div>
