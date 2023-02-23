@@ -34,7 +34,7 @@ function CommonPage({children, titleName, lineWidth, lineColor, initTitleOn = fa
   return (
     <FlexWrap>
       <img src={tab_bg} />
-      <CardWrap>{children}</CardWrap>
+      {children}
     </FlexWrap>
   );
 }

@@ -10,7 +10,7 @@ const ListItem = styled.div`
   height: 82px;
   position: relative;
   &:hover {
-    background: #ecf5ff;
+    background: #ecf5ff !important;
     color: #005a9f;
     svg {
       path {
