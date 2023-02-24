@@ -12,61 +12,44 @@ import {CardWrap, ContentWrap, UnderLineWrap} from '@/style/styles';
 
 export default function CommonDetail() {
   const {id} = useParams();
-  // get dynamic detail
-  let detail = dynamics.find((item) => {
-      return item.id === id;
-    }),
-    indexValue = dynamics.findIndex((item) => {
-      return item.id === id;
-    }),
-    backIndex =
-      indexValue - 1 < 0
-        ? '/dynamics'
-        : `/dynamics/${
-            dynamics.find((i, index) => {
-              return index === indexValue - 1;
-            })?.id
-          }`,
-    nextIndex =
-      indexValue + 1 > dynamics.length - 1
-        ? '/dynamics'
-        : `/dynamics/${
-            dynamics.find((i, index) => {
-              return index === indexValue + 1;
-            })?.id
-          }`;
-  // get achievement detail
-  if (useLocation().pathname.split('/')[1] === 'achievements') {
-    detail = achievements.find((item) => {
-      return item.id === id;
-    });
-    indexValue = achievements.findIndex((item) => {
-      return item.id === id;
-    });
-    backIndex =
-      indexValue - 1 < 0
-        ? '/achievements'
-        : `/achievements/${
-            achievements.find((i, index) => {
-              return index === indexValue - 1;
-            })?.id
-          }`;
-    nextIndex =
-      indexValue + 1 > dynamics.length - 1
-        ? '/achievements'
-        : `/achievements/${
-            dynamics.find((i, index) => {
-              return index === indexValue + 1;
-            })?.id
-          }`;
+  const moduleName = useLocation().pathname.split('/')[1];
+  // get dynamics
+  let data = dynamics,
+    indexValue = 0;
+  // get achievements
+  if (moduleName === 'achievements') {
+    data = achievements;
   }
+  const detail = data.find((item, index) => {
+    indexValue = index;
+    return item.id === id;
+  });
+  const backPath =
+    indexValue - 1 < 0
+      ? `/${moduleName}`
+      : `/${moduleName}/${
+          data.find((i, index) => {
+            return index === indexValue - 1;
+          })?.id
+        }`;
+  const nextPath =
+    indexValue + 1 > data.length - 1
+      ? `/${moduleName}`
+      : `/${moduleName}/${
+          data.find((i, index) => {
+            return index === indexValue + 1;
+          })?.id
+        }`;
   const navigate = useNavigate();
-
   return (
     <CommonPage initTitleOn={false}>
       <CardWrap style={{minHeight: '300px'}}>
         <div style={{padding: '0 5%'}}>
-          <Space size={'small'} onClick={() => navigate('/dynamics')} style={{cursor: 'pointer'}}>
+          <Space
+            size={'small'}
+            onClick={() => navigate(`/${moduleName}`)}
+            style={{cursor: 'pointer'}}
+          >
             <img src={page_return} />
             <div style={{color: '#B0B0B0', fontSize: '14px'}}>返回</div>
           </Space>
@@ -89,11 +72,11 @@ export default function CommonDetail() {
             cursor: 'pointer',
           }}
         >
-          <Space size={'small'} onClick={() => navigate(`${backIndex}`)}>
+          <Space size={'small'} onClick={() => navigate(`${backPath}`)}>
             <img src={back} />
             <div style={{fontSize: '16px'}}>上一篇</div>
           </Space>
-          <Space size={'small'} onClick={() => navigate(`${nextIndex}`)}>
+          <Space size={'small'} onClick={() => navigate(`${nextPath}`)}>
             <img src={next} />
             <div style={{fontSize: '16px'}}>下一篇</div>
           </Space>
