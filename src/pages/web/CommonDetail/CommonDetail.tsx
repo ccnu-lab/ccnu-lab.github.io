@@ -43,7 +43,7 @@ export default function CommonDetail() {
   const navigate = useNavigate();
   return (
     <CommonPage initTitleOn={false}>
-      <CardWrap style={{minHeight: '300px'}}>
+      <CardWrap style={{minHeight: '300px', height: '100%'}}>
         <div style={{padding: '0 5%'}}>
           <Space
             size={'small'}
