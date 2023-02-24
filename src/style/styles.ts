@@ -1,8 +1,6 @@
 import {Card} from 'antd';
 import styled from 'styled-components';
 
-import list_next from '@/assets/svg/Vector.png';
-
 const ListItem = styled.div`
   display: flex;
   justify-content: space-between;
@@ -11,7 +9,6 @@ const ListItem = styled.div`
   border-radius: 8px;
   height: 82px;
   position: relative;
-  cursor: url(${list_next});
   &:hover {
     background: #ecf5ff !important;
     color: #005a9f;

@@ -1,9 +1,10 @@
 import {useSetState} from 'ahooks';
 import {Space} from 'antd';
 import dayjs from 'dayjs';
-import React from 'react';
+import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
 
+import list_next from '@/assets/images/list_next.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 import {CommonPage} from '@/component/UI/CommonPage';
 import {CommonPagination} from '@/component/UI/CommonPagination';
@@ -12,6 +13,7 @@ import {ContentWrap, FlexWrap, ListItem} from '@/style/styles';
 
 export default function Dynamics() {
   const navigate = useNavigate();
+  const [visible, setVisible] = useState({id: '', status: false});
   const [state, setState] = useSetState({
     page: 1,
     size: 10,
@@ -23,6 +25,8 @@ export default function Dynamics() {
       <div style={{marginTop: '56px'}}>
         {achievementsData.map((item) => (
           <ListItem
+            onMouseOver={() => setVisible({id: item.id, status: true})}
+            onMouseLeave={() => setVisible({id: '', status: false})}
             key={item.id}
             onClick={() => navigate(`/achievements/${item.id}`)}
             style={{margin: '20px 6%', background: '#ffffff'}}
@@ -31,7 +35,11 @@ export default function Dynamics() {
               <TrendIcon />
               <ContentWrap>{item.title}</ContentWrap>
             </Space>
-            <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
+            {visible.id === item.id && visible.status ? (
+              <img src={list_next} />
+            ) : (
+              <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
+            )}
           </ListItem>
         ))}
       </div>
