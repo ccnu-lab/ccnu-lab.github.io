@@ -1,9 +1,10 @@
 import {Typography, Space} from 'antd';
 import dayjs from 'dayjs';
-import React from 'react';
+import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
 
 import home_title from '@/assets/images/home_title.png';
+import list_next from '@/assets/images/list_next.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 const {Title} = Typography;
 import dynamics from '@/constants/dynamics';
@@ -15,6 +16,7 @@ import {HomeWrap, ImageWrap, HomePrincipalBox, ProjectWrap, ProjectContentWrap} 
 export default function Home() {
   const dynamicsTop8 = dynamics.slice(0, 8);
   const navigate = useNavigate();
+  const [visible, setVisible] = useState({id: '', status: false});
   return (
     <HomeWrap>
       <ImageWrap>
@@ -54,12 +56,21 @@ export default function Home() {
       </TitleWrap>
       <div style={{marginBottom: '164px'}}>
         {dynamicsTop8.map((item) => (
-          <ListItem key={item.id} onClick={() => navigate('/dynamics')}>
+          <ListItem
+            onMouseOver={() => setVisible({id: item.id, status: true})}
+            onMouseLeave={() => setVisible({id: '', status: false})}
+            key={item.id}
+            onClick={() => navigate('/dynamics')}
+          >
             <Space size={'middle'}>
               <TrendIcon />
               <ContentWrap>{item.title}</ContentWrap>
             </Space>
-            <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
+            {visible.id === item.id && visible.status ? (
+              <img src={list_next} />
+            ) : (
+              <ContentWrap>{dayjs(item.createTime).format('YYYY-MM-DD')} </ContentWrap>
+            )}
           </ListItem>
         ))}
       </div>

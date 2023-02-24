@@ -67,6 +67,13 @@ const WebRoutes: RouteObject[] = [
             <Achievements />
           </KeepAlive>
         ),
+        children: [
+          {
+            id: 'commonDetail',
+            path: '/achievements/:id',
+            element: <CommonDetail />,
+          },
+        ],
       },
     ],
   },

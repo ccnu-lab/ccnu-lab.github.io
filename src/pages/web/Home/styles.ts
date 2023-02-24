@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { PrincipalBox } from '@/style/styles';
+
 import home from '@/assets/images/home.jpg';
 import home_project_background from '@/assets/images/home_project_bg.png';
+import {PrincipalBox} from '@/style/styles';
 
 const HomeWrap = styled.div`
   /* overflow-x: hidden; */
@@ -25,7 +26,7 @@ const HomePrincipalBox = styled(PrincipalBox)`
       0px 16px 24px 2px rgba(102, 120, 166, 0.04), 0px 8px 10px -5px rgba(102, 120, 166, 0.08);
     transform: translateY(-10px);
   }
-`
+`;
 
 const ProjectWrap = styled.div`
   height: 482px;
