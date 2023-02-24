@@ -1,6 +1,8 @@
 import {Card} from 'antd';
 import styled from 'styled-components';
 
+import list_next from '@/assets/svg/Vector.png';
+
 const ListItem = styled.div`
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,7 @@ const ListItem = styled.div`
   border-radius: 8px;
   height: 82px;
   position: relative;
+  cursor: url(${list_next});
   &:hover {
     background: #ecf5ff !important;
     color: #005a9f;
@@ -40,6 +43,7 @@ const CardWrap = styled(Card)`
   margin: -103px 0 117px;
   height: 1382px;
   width: 1200px;
+  min-height: 500px;
   background: #fbfdff;
 `;
 
@@ -78,7 +82,7 @@ const PrincipalBox = styled.div`
   margin-top: 82px;
   margin-bottom: 155px;
   padding: 25px 20px;
-  
+
   position: relative;
   border: 1px solid rgba(102, 120, 166, 0);
   img {

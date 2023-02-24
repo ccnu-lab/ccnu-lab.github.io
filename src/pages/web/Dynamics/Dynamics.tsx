@@ -19,7 +19,7 @@ export default function Dynamics() {
 
   const dynamicsData = dynamics.slice((state.page - 1) * 10, state.size * state.page);
   return (
-    <CommonPage titleName="新闻" lineWidth="56px" initTitleOn={true}>
+    <CommonPage titleName="新闻" lineWidth="6%" initTitleOn={true}>
       <div style={{marginTop: '56px'}}>
         {dynamicsData.map((item) => (
           <ListItem

@@ -1,12 +1,12 @@
 import React from 'react';
+
 import introduction from '@/assets/images/introduction.png';
 import {CommonPage} from '@/component/UI/CommonPage';
 import {ContentWrap} from '@/style/styles';
 
-
 export default function Introduction() {
   return (
-    <CommonPage titleName="项目简介" lineWidth="12%" initTitleOn={true}>
+    <CommonPage titleName="项目简介" lineWidth="13%" initTitleOn={true}>
       <br></br>
       <ContentWrap style={{padding: '0 7% 56px'}}>
         <p>
