@@ -34,6 +34,7 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}fr
   margin: -103px 0 117px;
   height: 1382px;
   width: 1200px;
+  min-height: 500px;
   background: #fbfdff;
 `,x=t.div`
   display: flex;
@@ -64,7 +65,7 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}fr
   margin-top: 82px;
   margin-bottom: 155px;
   padding: 25px 20px;
-  
+
   position: relative;
   border: 1px solid rgba(102, 120, 166, 0);
   img {
