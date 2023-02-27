@@ -3,15 +3,21 @@ import dayjs from 'dayjs';
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
 
-import home_title from '@/assets/images/home_title.png';
 import list_next from '@/assets/images/list_next.png';
 import {ReactComponent as TrendIcon} from '@/assets/svg/trend_icon.svg';
 const {Title} = Typography;
 import dynamics from '@/constants/dynamics';
 import principals from '@/constants/principals';
-import {ListItem, TitleWrap, FlexWrap, ContentWrap} from '@/style/styles';
+import {ListItem, TitleWrap, FlexWrap, ContentWrap, UnderLineWrap} from '@/style/styles';
 
-import {HomeWrap, ImageWrap, HomePrincipalBox, ProjectWrap, ProjectContentWrap} from './styles';
+import {
+  HomeWrap,
+  ImageWrap,
+  HomePrincipalBox,
+  ProjectWrap,
+  ProjectContentWrap,
+  ShadowWrap,
+} from './styles';
 
 export default function Home() {
   const dynamicsTop8 = dynamics.slice(0, 8);
@@ -20,12 +26,11 @@ export default function Home() {
   return (
     <HomeWrap>
       <ImageWrap>
-        <img
-          src={home_title}
-          style={{
-            width: '100%',
-          }}
-        />
+        <ShadowWrap>
+          <div className="title">科技创新2030—“新一代人工智能”重大项目</div>
+          <UnderLineWrap lineColor="#FFFFFF" lineWidth="20%" />
+          <div className="introduction">网站正在建设中......</div>
+        </ShadowWrap>
       </ImageWrap>
       <TitleWrap>
         <Title level={1}>负责人介绍</Title>
