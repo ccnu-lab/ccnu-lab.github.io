@@ -2,6 +2,7 @@ import {Card} from 'antd';
 import styled from 'styled-components';
 
 const ListItem = styled.div`
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
