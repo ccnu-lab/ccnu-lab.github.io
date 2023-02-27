@@ -1,4 +1,4 @@
-import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}from"./antd-59c365fd.js";const p=t.div`
+import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}from"./antd-59c365fd.js";const o=t.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,6 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}fr
     margin: 0;
   }
   .ant-typography {
-    font-style: normal;
     font-weight: 800px;
     font-size: 32px;
     line-height: 39px;
@@ -41,11 +40,11 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}fr
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-`,s=t.div`
+`,d=t.div`
   height: 1px;
   background-color: ${i=>i.lineColor?i.lineColor:" #000000"};
   width: ${i=>i.lineWidth?i.lineWidth:"100%"};
-`,d=t.div`
+`,s=t.div`
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
@@ -87,4 +86,4 @@ import{s as t}from"./styled-components.browser.esm-3a1d7e2e.js";import{f as e}fr
     font-size: 12px;
     line-height: 20px;
   }
-`;export{d as C,x as F,p as L,f as P,r as T,s as U,a};
+`;export{s as C,x as F,o as L,f as P,r as T,d as U,a};
