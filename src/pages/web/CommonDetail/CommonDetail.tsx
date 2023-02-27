@@ -65,11 +65,11 @@ export default function CommonDetail() {
         <ContentWrap style={{padding: '0 5%', display: 'flex'}}>{detail?.content}</ContentWrap>
         <div
           style={{
-            marginBottom: '127px',
             display: 'flex',
             justifyContent: 'space-between',
             paddingTop: '170px',
             cursor: 'pointer',
+            padding: '127px 5%',
           }}
         >
           <Space size={'small'} onClick={() => navigate(`${backPath}`)}>
