@@ -14,9 +14,42 @@ const ImageWrap = styled.div`
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-size: cover;
 `;
 
+const ShadowWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  flex-direction: column;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(11, 90, 150, 0.9) 1.04%,
+    rgba(6, 111, 192, 0.7) 45.31%,
+    rgba(222, 233, 95, 0) 100%
+  );
+  background-blend-mode: saturation;
+  .title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #ffffff;
+    padding: 0 0 27px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .introduction {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+    color: #ffffff;
+    padding: 21px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+`;
 const HomePrincipalBox = styled(PrincipalBox)`
   cursor: pointer;
   transition: 0.3s;
@@ -49,4 +82,4 @@ const ProjectContentWrap = styled.div`
   margin: 0 400px 116px;
 `;
 
-export {HomeWrap, ImageWrap, HomePrincipalBox, ProjectWrap, ProjectContentWrap};
+export {HomeWrap, ImageWrap, HomePrincipalBox, ProjectWrap, ProjectContentWrap, ShadowWrap};

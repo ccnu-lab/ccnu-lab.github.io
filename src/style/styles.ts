@@ -28,7 +28,6 @@ const TitleWrap = styled.div`
     margin: 0;
   }
   .ant-typography {
-    font-style: normal;
     font-weight: 800px;
     font-size: 32px;
     line-height: 39px;
