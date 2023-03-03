@@ -2,7 +2,7 @@ import {lazy} from 'react';
 import {RouteObject} from 'react-router-dom';
 
 import {KeepAlive} from '@/component/KeepAlive';
-import MonthlyReport from '@/pages/web/MonthlyReport/MonthlyReport';
+// import MonthlyReport from '@/pages/web/MonthlyReport/MonthlyReport';
 
 const WebLayout = lazy(() => import('@/routes/WebLayout'));
 const Home = lazy(() => import('@/pages/web/Home/Home'));
@@ -12,13 +12,8 @@ const Subjects = lazy(() => import('@/pages/web/subjects/Subjects'));
 const Dynamics = lazy(() => import('@/pages/web/Dynamics/Dynamics'));
 const CommonDetail = lazy(() => import('@/pages/web/CommonDetail/CommonDetail'));
 
-export type RoutePath =
-  | 'home'
-  | 'introduction'
-  | 'dynamics'
-  | 'subjects'
-  | 'achievements'
-  | 'monthly_report';
+export type RoutePath = 'home' | 'introduction' | 'dynamics' | 'subjects' | 'achievements';
+// | 'monthly_report';
 
 export const pathDict: Record<RoutePath, string> = {
   home: '主页',
@@ -26,7 +21,7 @@ export const pathDict: Record<RoutePath, string> = {
   dynamics: '项目动态',
   subjects: '课程设置',
   achievements: '成果展示',
-  monthly_report: '月报',
+  // monthly_report: '月报',
 };
 
 const WebRoutes: RouteObject[] = [
@@ -83,15 +78,15 @@ const WebRoutes: RouteObject[] = [
           },
         ],
       },
-      {
-        id: 'monthly_report',
-        path: '/monthly_report',
-        element: (
-          <KeepAlive>
-            <MonthlyReport />
-          </KeepAlive>
-        ),
-      },
+      // {
+      //   id: 'monthly_report',
+      //   path: '/monthly_report',
+      //   element: (
+      //     <KeepAlive>
+      //       <MonthlyReport />
+      //     </KeepAlive>
+      //   ),
+      // },
     ],
   },
 ];
